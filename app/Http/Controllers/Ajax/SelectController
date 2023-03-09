@@ -1,0 +1,12 @@
+<?php
+
+namespace nextcore\Http\Controllers\Ajax;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+
+class SelectController extends Controller
+{
+
+
+}

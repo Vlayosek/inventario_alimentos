@@ -1,0 +1,6 @@
+node_modules
+.env
+/config/database.php
+/storage/framework/
+storage/logs
+.idea/

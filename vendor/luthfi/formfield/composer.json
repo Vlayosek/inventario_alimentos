@@ -1,0 +1,41 @@
+{
+    "name": "luthfi/formfield",
+    "description": "Laravel Form Field the extension of Laravelcollective Form for Laravel 5.3 and newer with Twitter Bootstrap 4.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nafies Luthfi",
+            "email": "nafiesl@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Luthfi\\FormField\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.2",
+        "laravelcollective/html": ">=5.3"
+    },
+    "require-dev": {
+        "orchestra/testbench": ">=3.0 <3.8"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Luthfi\\FormField\\FormFieldServiceProvider"
+            ],
+            "aliases": {
+                "FormField": "Luthfi\\FormField\\FormFieldFacade",
+                "Form": "Collective\\Html\\FormFacade",
+                "Html": "Collective\\Html\\HtmlFacade"
+            }
+        }
+    }
+}

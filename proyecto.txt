@@ -1,0 +1,8 @@
+11aaAA*
+minimo 6 caracteres
+
+laragon (suit de servicios para una aplicacion)
+laravel framework 
+(jquery , canvas , ajax(core[propio],utils[propio]),datatable,
+bootstrap,jqueryui,highchart,daterange,dropzone,php,javascript)
+mysql

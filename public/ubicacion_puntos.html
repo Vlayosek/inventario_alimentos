@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Simple Map</title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+  <style>
+    /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>
+  <script>
+    var map;
+      function initMap() {
+        ///cambiar
+         var locations = [
+      ['Maroubra Beach', -2.1852191999999997, -79.8448743, 1],
+      ['2 dpunto', -2.1293873, -79.9490216, "blue"]
+    ];
+        ///cambiar
+        var myLatLng = {
+              lat: -2.1293873,
+              lng: -79.9490216
+          };
+        map = new google.maps.Map(document.getElementById('map'), {center: myLatLng, zoom: 10});
+        
+        
+        
+       var infowindow = new google.maps.InfoWindow();
+        
+        
+        
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {  
+       var markercolor = 'https://maps.google.com/mapfiles/ms/icons/green-dot.png';
+      
+      if (locations[i][3] == 'blue') { markercolor = 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png' }
+      
+      
+      
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        icon: markercolor,
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+        
+ 
+        
+      }
+  </script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpy_LdbNd9borR09FZmdm7k7oYqL5dQ5o&callback=initMap">
+</script></body>
+
+</html>
